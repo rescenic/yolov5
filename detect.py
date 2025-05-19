@@ -36,6 +36,12 @@ import platform
 import sys
 from pathlib import Path
 
+
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
+
+
 import torch
 
 FILE = Path(__file__).resolve()
